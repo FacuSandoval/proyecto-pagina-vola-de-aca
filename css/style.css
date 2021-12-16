@@ -7,8 +7,7 @@
 .grilla{
 display: grid;
     grid-template-columns: 100%;
-    text-align: center;
-    grid-template-rows: (repeat(4, 150px));
+    grid-template-rows: (repeat(4, auto));
     grid-template-areas: 'nav'
                         'header'
                         'main'
@@ -27,13 +26,17 @@ main{
 
 footer{
   grid-area: footer;
+  
 }
 .pieDePagina{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #0C1414;
-    color: #FF9F00;
+  color: #FF9F00;
   width: 100%;
-  height: 20px;
-  text-align: center;
+  height: 100px;
+  
 }
 
 .banners{
@@ -77,14 +80,38 @@ div .fotosPages img{
   justify-content: center;
   align-items: center;
 }
-input{
-  padding: 15px;
-  margin-bottom: 20px;
+.h2Contacto{
+  color: #F5F5F5;
 }
-label{
-  padding: 15px;
-  margin-bottom: 5px;
+
+div .formulario{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 800px;
 }
+form{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 700px;
+  margin-bottom: 10px;
+  background-color: #F5F5F5;
+  background-image: url(../images/back-form.jpeg);
+  border-radius: 10px;
+}
+input,textarea{
+  
+  margin-bottom: 2px;
+  padding: 5px;
+}
+#contacto{
+  margin-bottom: 15px;
+}
+
 h3{
   background-color: #0C1414;
   color: #FF9F00;
@@ -105,7 +132,8 @@ article ul li{
 .titulosVisas{
   margin: 40px 20px 20px 40px;
 }
-  
+
+
 @media all and (max-width: 930px){
   
   .imagenFondo{
@@ -121,24 +149,11 @@ article ul li{
     height:300px;
   }
   
-}
-.form-label{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-}
+  form{
+    height: 600px;
+  }
 
-/*#exampleFormControlInput1{ 
-  width: 50%;
-    
-  PROBE ACHICAR EL INPUT Y CENTRARLO, ME LO ACHICA, PERO NO ME DEJA PONERLO AL CENTRO DEL CONTENEDOR.
-  Probe con display flex, justify content, align self, y no pude. 
 }
-*/
-
-
 
 
 @media all and (max-width: 600px){
@@ -146,6 +161,21 @@ article ul li{
     width: 100%;
     height: 100px;
     font-family: 'Staatliches', cursive;
+
+  }
+  
+  form{
+    width: 100%;
+    height: 450px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  div .formulario{
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
   }
   
   iframe{
@@ -154,7 +184,7 @@ article ul li{
   }
   .pieDePagina{
     width: 100%;
-    height: 40px;
+    height: 100px;
     text-align: center;
   }
   .container{
@@ -165,12 +195,14 @@ article ul li{
   }
 
 }
+
 #body{
   background-color: #F5F5F5;
   font-family: 'Roboto Slab', serif;
   animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+  
 }
   
 @keyframes fadeInAnimation {

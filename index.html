@@ -20,7 +20,7 @@
       
       <nav class="navbar navbar-expand-md  navbar-dark bg-dark navbar sticky-top navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="./images/logo-ok.png" alt=""></a>
+          <a class="navbar-brand" href="./index.html"><img src="./images/logo-ok.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -56,7 +56,6 @@
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="4000">
                 <img src="./images/viajes-a-australia.jpg" class="d-block w-100" alt="...">
-                
               </div>
               <div class="carousel-item" data-bs-interval="4000">
                 <img src="./images/viajes-a-nueva-zelanda.jpg" class="d-block w-100" alt="...">
@@ -86,6 +85,7 @@
         <h1 class="titulo">¡Los destinos que te esperan!</h1>
 
         <div class="container">
+          <div data-aos="zoom-in">
           <div class="card" style="width: 18rem;">
             <img src="./images/australia-icono.jpg" class="card-img-top" alt="australia-icono">
             <div class="card-body">
@@ -94,25 +94,30 @@
               <a href="./html/australia.html" class="btn btn-primary">Ir a la sección</a>
             </div>
           </div>
+          </div>
 
-          <div class="card" style="width: 18rem;">
-            <img src="./images/nueva-zelanda-icono.jpg" class="card-img-top" alt="nueva-zelanda-icono">
-            <div class="card-body">
-              <h5 class="card-title">NUEVA ZELANDA</h5>
-              <p class="card-text">Nueva Zelanda, Aotearoa en maorí, es un país que te cambia y que te revuelve por dentro. Y lo cierto es que, no falla: tan pronto pones un pie en este paraíso quedas hipnotizado de su belleza para siempre.</p>
-              <a href="./html/nueva_zelanda.html" class="btn btn-primary">Ir a la sección</a>
+          <div data-aos="zoom-in">
+            <div class="card" style="width: 18rem;">
+                <img src="./images/nueva-zelanda-icono.jpg" class="card-img-top" alt="nueva-zelanda-icono">
+              <div class="card-body">
+                <h5 class="card-title">NUEVA ZELANDA</h5>
+                <p class="card-text">Nueva Zelanda, Aotearoa en maorí, es un país que te cambia y que te revuelve por dentro. Y lo cierto es que, no falla: tan pronto pones un pie en este paraíso quedas hipnotizado de su belleza para siempre.</p>
+                <a href="./html/nueva_zelanda.html" class="btn btn-primary">Ir a la sección</a>
+              </div>
             </div>
           </div>
 
-          <div class="card" style="width: 18rem;">
-            <img src="./images/francia-icon.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">FRANCIA</h5>
-              <p class="card-text">Francia se destaca por su producción de vinos, sus paisajes, cultura e historia, que hacen de este país uno de los más visitados del mundo.</p>
-              <a href="./html/francia.html" class="btn btn-primary">Ir a la sección</a>
-            </div>
+          <div data-aos="zoom-in">
+              <div class="card" style="width: 18rem;">
+                  <img src="./images/francia-icon.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">FRANCIA</h5>
+                  <p class="card-text">Francia se destaca por su producción de vinos, sus paisajes, cultura e historia, que hacen de este país uno de los más visitados del mundo.</p>
+                  <a href="./html/francia.html" class="btn btn-primary">Ir a la sección</a>
+                </div>
+              </div>
           </div>
-      </div>
+        </div>
         
           <h2>¿Qué son las visas Working Holiday?</h2>
 
@@ -175,8 +180,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-  AOS.init();
-</script>
+    <script>AOS.init();</script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 </body>
 </html>
