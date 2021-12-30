@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
   }
+
+  $colorLetra: #FF9F00;
+  $background-color: #F5F5F5;
+  $background-alt: #0C1414;
   
   
   .grilla{
@@ -32,8 +36,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0C1414;
-    color: #FF9F00;
+   background-color: $background-alt;
+    color: $colorLetra;
     width: 100%;
     height: 100px;
     
@@ -55,14 +59,15 @@
     width:60%;
     height:400px;
   }
-  h2{
+
+  %h2{
     margin-bottom: 15px;
     text-align: center;
     padding: 50px;
   }
   
   h4{
-    padding: 50px;
+    @extend %h2;
   }
   .main li{
     margin-bottom: 20px;
@@ -96,7 +101,7 @@
     height: 800px;
   
     .h2Contacto{
-        color: #F5F5F5;
+      background-color: $background-color;
       }
 
   form{
@@ -125,7 +130,7 @@
 
   h3{
     background-color: #0C1414;
-    color: #FF9F00;
+    color: $colorLetra;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 40px;
@@ -135,10 +140,11 @@
   article{
     margin: 40px 20px 20px 40px;
   }
-  article ul li{
-    padding: 10px 0px 10px 0px;
-    text-align: left;
-  }
+    article ul li{
+      padding: 10px 0px 10px 0px;
+      text-align: left;
+    }
+  
   
   .titulosVisas{
     margin: 40px 20px 20px 40px;
@@ -150,6 +156,7 @@
     flex-direction: row;
     justify-content: space-around;
     margin-top: 50px;
+    flex-wrap: wrap;
   }
   
   /*ICONOS FOOTER*/
@@ -226,64 +233,80 @@
     }
 
 
-  @media all and (max-width: 930px){
+    $breakpoints: (
+      sm: 540px,
+      md: 768px,
+      lg: 1024px
+    );
     
-    .imagenFondo{
-      width: 100%;
-      height: 200px;
+    @mixin mobile($breakpoint){
+      @media screen and (min-width: map-get($breakpoints,$breakpoint)){
+        @content;
+      }
+
+    }
+
+    @include mobile(sm){
+      .imagenFondo{
+        width: 100%;
+        height: 100px;
+        font-family: 'Staatliches', cursive;
+    
+      }
       
-    }
-    .bannerAlt{
-      height: 100px;
-    }
-    iframe{
-      width:100%;
-      height:300px;
+      form{
+        width: 100%;
+        height: 450px;
+        justify-content: center;
+        align-content: center;
+      }
+    
+      div .formulario{
+        height: 500px;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+      }
+      
+      iframe{
+        width:100%;
+        height:200px;
+      }
+      .pieDePagina{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+      }
+      .container{
+        flex-wrap: wrap;
+      }
+      .card{
+        margin-bottom: 20px;
+      }
     }
     
-    form{
-      height: 600px;
-    }
-  
-  }
-  
-  
-  @media all and (max-width: 600px){
-    .imagenFondo{
-      width: 100%;
-      height: 100px;
-      font-family: 'Staatliches', cursive;
-  
+    @include mobile(md){
+      
+      .imagenFondo{
+        width: 100%;
+        height: 200px;
+        
+      }
+      .bannerAlt{
+        height: 100px;
+      }
+      iframe{
+        width:100%;
+        height:300px;
+      }
+      
+      form{
+        height: 600px;
+      }
+
+      div.container{
+        flex-wrap: wrap;
+      }
+    
     }
     
-    form{
-      width: 100%;
-      height: 450px;
-      justify-content: center;
-      align-content: center;
-    }
-  
-    div .formulario{
-      height: 500px;
-      width: 100%;
-      justify-content: center;
-      align-content: center;
-    }
-    
-    iframe{
-      width:100%;
-      height:200px;
-    }
-    .pieDePagina{
-      width: 100%;
-      height: 100px;
-      text-align: center;
-    }
-    .container{
-      flex-wrap: wrap;
-    }
-    .card{
-      margin-bottom: 20px;
-    }
-  
-  }
